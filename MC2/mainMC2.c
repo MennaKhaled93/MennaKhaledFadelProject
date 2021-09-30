@@ -231,16 +231,16 @@ int main()
 
 		if(y=='0')
 		{
-			SET_BIT(PORTC,2);
+			TOGGLE_BIT(PORTC,2);
 		}
 
 		else if(y=='1')
 		{
-			SET_BIT(PORTC,7);
+			TOGGLE_BIT(PORTC,7);
 		}
 		else if(y=='2')
 		{
-			SET_BIT(PORTD,3);
+			TOGGLE_BIT(PORTD,3);
 		}
 	}
 }
