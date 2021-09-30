@@ -15,9 +15,7 @@ mainMC1.o mainMC1.o: ../mainMC1.c ../Bit_Math.h ../STD_Types.h \
   ../MCAL/SPI/../../Bit_Math.h ../MCAL/SPI/../../STD_Types.h \
   ../MCAL/UART/UART.h ../MCAL/UART/../../Bit_Math.h \
   ../MCAL/UART/../../STD_Types.h \
-  ../MCAL/UART/../External_Interrupt/External_Interrupt.h \
-  ../HAL/Bluetooth/bluetooth.h ../HAL/Bluetooth/../../Bit_Math.h \
-  ../HAL/Bluetooth/../../STD_Types.h
+  ../MCAL/UART/../External_Interrupt/External_Interrupt.h
 
 ../Bit_Math.h:
 
@@ -86,9 +84,3 @@ mainMC1.o mainMC1.o: ../mainMC1.c ../Bit_Math.h ../STD_Types.h \
 ../MCAL/UART/../../STD_Types.h:
 
 ../MCAL/UART/../External_Interrupt/External_Interrupt.h:
-
-../HAL/Bluetooth/bluetooth.h:
-
-../HAL/Bluetooth/../../Bit_Math.h:
-
-../HAL/Bluetooth/../../STD_Types.h:

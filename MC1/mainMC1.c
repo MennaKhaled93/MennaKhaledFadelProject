@@ -19,7 +19,7 @@
 #include "MCAL/TIMER0/TIM0_cfg.h"
 #include"MCAL/SPI/spi.h"
 #include"MCAL/UART/UART.h"
-#include"HAL/Bluetooth/bluetooth.h"
+
 volatile int ctr = 0;
 volatile int ctr2 = 0;
 
@@ -224,18 +224,18 @@ int main(void)
 */
 int main(void)
 {
-	uint8 text=0;
+	uint8 x=0;
     Dio_init();
     lcd_init();
     lcd_clear();
 	SPI_initMaster(); // Master Initialization
 	_delay_ms(50); // delay until MC2 finish its initialization task
-
+	UART_init();
     while(1)
     {
-        bluetooth (text);
-        lcd_str(text);
-        SPI_SendString(text);
+    	x= UART_recieveByte();
+        lcd_str(&x);
+        SPI_sendByte( x);
         _delay_ms(500);
     }
 }

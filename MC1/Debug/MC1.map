@@ -69,7 +69,6 @@ LOAD ./MCAL/Dio/Dio.o
 LOAD ./MCAL/Dio/Dio_config.o
 LOAD ./MCAL/ADC/adc.o
 LOAD ./HAL/LCD/lcd.o
-LOAD ./HAL/Bluetooth/bluetooth.o
 LOAD ./mainMC1.o
 LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
@@ -165,7 +164,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x3300
+.text           0x00000000     0x32dc
  *(.vectors)
  .vectors       0x00000000       0x54 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
                 0x00000000                __vectors
@@ -246,7 +245,6 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .text          0x00000092        0x0 ./MCAL/Dio/Dio_config.o
  .text          0x00000092        0x0 ./MCAL/ADC/adc.o
  .text          0x00000092        0x0 ./HAL/LCD/lcd.o
- .text          0x00000092        0x0 ./HAL/Bluetooth/bluetooth.o
  .text          0x00000092        0x0 ./mainMC1.o
  .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
@@ -411,28 +409,25 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .text.lcd_str_xy
                 0x00002f90       0x58 ./HAL/LCD/lcd.o
                 0x00002f90                lcd_str_xy
- .text.bluetooth
-                0x00002fe8       0x22 ./HAL/Bluetooth/bluetooth.o
-                0x00002fe8                bluetooth
- .text.test     0x0000300a       0x20 ./mainMC1.o
-                0x0000300a                test
+ .text.test     0x00002fe8       0x20 ./mainMC1.o
+                0x00002fe8                test
  .text.TIM0_init2
-                0x0000302a       0x5a ./mainMC1.o
-                0x0000302a                TIM0_init2
- .text.main     0x00003084      0x20a ./mainMC1.o
-                0x00003084                main
- .text.libgcc   0x0000328e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x0000328e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x0000328e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x0000328e       0x38 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x0000328e                __prologue_saves__
- .text.libgcc   0x000032c6       0x36 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x000032c6                __epilogue_restores__
-                0x000032fc                . = ALIGN (0x2)
+                0x00003008       0x5a ./mainMC1.o
+                0x00003008                TIM0_init2
+ .text.main     0x00003062      0x208 ./mainMC1.o
+                0x00003062                main
+ .text.libgcc   0x0000326a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x0000326a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000326a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000326a       0x38 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x0000326a                __prologue_saves__
+ .text.libgcc   0x000032a2       0x36 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x000032a2                __epilogue_restores__
+                0x000032d8                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000032fc        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x000032fc                exit
-                0x000032fc                _exit
+ .fini9         0x000032d8        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x000032d8                exit
+                0x000032d8                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -451,11 +446,11 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000032fc        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x000032d8        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00003300                _etext = .
+                0x000032dc                _etext = .
 
-.data           0x00800060       0x70 load address 0x00003300
+.data           0x00800060       0x70 load address 0x000032dc
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
@@ -468,7 +463,6 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .data          0x00800060        0x0 ./MCAL/Dio/Dio_config.o
  .data          0x00800060        0x0 ./MCAL/ADC/adc.o
  .data          0x00800060        0x0 ./HAL/LCD/lcd.o
- .data          0x00800060        0x0 ./HAL/Bluetooth/bluetooth.o
  .data          0x00800060        0x0 ./mainMC1.o
  .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
@@ -512,7 +506,6 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .bss           0x008000d0        0x0 ./MCAL/Dio/Dio_config.o
  .bss           0x008000d0        0x0 ./MCAL/ADC/adc.o
  .bss           0x008000d0        0x0 ./HAL/LCD/lcd.o
- .bss           0x008000d0        0x0 ./HAL/Bluetooth/bluetooth.o
  .bss           0x008000d0        0x0 ./mainMC1.o
  .bss           0x008000d0        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  .bss           0x008000d0        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
@@ -548,8 +541,8 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                 0x008000de                p2f1
                 0x008000e0                p2f2
                 0x008000e2                PROVIDE (__bss_end, .)
-                0x00003300                __data_load_start = LOADADDR (.data)
-                0x00003370                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000032dc                __data_load_start = LOADADDR (.data)
+                0x0000334c                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x008000e2        0x0
                 0x008000e2                PROVIDE (__noinit_start, .)
@@ -574,7 +567,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x351c
+.stab           0x00000000     0x3288
  *(.stab)
  .stab          0x00000000      0x54c ./MCAL/UART/UART.o
  .stab          0x0000054c      0x2a0 ./MCAL/Timer/timer0.o
@@ -593,14 +586,12 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                                 0x420 (size before relaxing)
  .stab          0x00001c38     0x10e0 ./HAL/LCD/lcd.o
                                0x129c (size before relaxing)
- .stab          0x00002d18      0x2a0 ./HAL/Bluetooth/bluetooth.o
-                                0x45c (size before relaxing)
- .stab          0x00002fb8      0x564 ./mainMC1.o
-                                0x720 (size before relaxing)
+ .stab          0x00002d18      0x570 ./mainMC1.o
+                                0x72c (size before relaxing)
 
-.stabstr        0x00000000     0x1eb6
+.stabstr        0x00000000     0x1d9f
  *(.stabstr)
- .stabstr       0x00000000     0x1eb6 ./MCAL/UART/UART.o
+ .stabstr       0x00000000     0x1d9f ./MCAL/UART/UART.o
 
 .stab.excl
  *(.stab.excl)
