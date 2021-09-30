@@ -12,7 +12,6 @@ RM := rm -rf
 -include MCAL/Timer/subdir.mk
 -include MCAL/TIMER0/subdir.mk
 -include MCAL/SPI/subdir.mk
--include MCAL/LED/subdir.mk
 -include MCAL/External_Interrupt/subdir.mk
 -include MCAL/Dio/subdir.mk
 -include MCAL/ADC/subdir.mk

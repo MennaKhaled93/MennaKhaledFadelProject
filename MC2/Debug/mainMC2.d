@@ -26,7 +26,7 @@ mainMC2.o mainMC2.o: ../mainMC2.c ../Bit_Math.h ../STD_Types.h \
   ../MCAL/UART/UART.h ../MCAL/UART/../../Bit_Math.h \
   ../MCAL/UART/../../STD_Types.h \
   ../MCAL/UART/../External_Interrupt/External_Interrupt.h \
-  ../MCAL/UART/../External_Interrupt/Interrupt_config.h ../MCAL/LED/led.h
+  ../MCAL/UART/../External_Interrupt/Interrupt_config.h
 
 ../Bit_Math.h:
 
@@ -115,5 +115,3 @@ mainMC2.o mainMC2.o: ../mainMC2.c ../Bit_Math.h ../STD_Types.h \
 ../MCAL/UART/../External_Interrupt/External_Interrupt.h:
 
 ../MCAL/UART/../External_Interrupt/Interrupt_config.h:
-
-../MCAL/LED/led.h:

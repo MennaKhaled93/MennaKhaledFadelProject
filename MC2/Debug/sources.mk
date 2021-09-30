@@ -24,7 +24,6 @@ HAL/LCD \
 MCAL/ADC \
 MCAL/Dio \
 MCAL/External_Interrupt \
-MCAL/LED \
 MCAL/SPI \
 MCAL/TIMER0 \
 MCAL/Timer \

@@ -19,7 +19,7 @@
 #include "MCAL/TIMER0/TIM0_cfg.h"
 #include"MCAL/SPI/spi.h"
 #include"MCAL/UART/UART.h"
-#include"MCAL/LED/led.h"
+
 volatile int ctr = 0;
 volatile int ctr2 = 0;
 
@@ -221,13 +221,26 @@ int main(void)
 
 int main()
 {
-	uint8 str[20];
+	uint8 y=0;
     Dio_init();
 	SPI_initSlave();
 
 	while(1)
 	{
-         SPI_ReceiveString(str);
-         Led_Handler(str);
+		y= SPI_recieveByte();
+
+		if(y==0)
+		{
+			SET_BIT(PORTC,2);
+		}
+
+		else if(y==1)
+		{
+			SET_BIT(PORTC,7);
+		}
+		else if(y==2)
+		{
+			SET_BIT(PORTD,3);
+		}
 	}
 }
