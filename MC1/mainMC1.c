@@ -236,6 +236,6 @@ int main(void)
     	x= UART_recieveByte();
         lcd_str(&x);
         SPI_sendByte( x);
-        _delay_ms(500);
+
     }
 }
